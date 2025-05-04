@@ -4,12 +4,12 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
-import { UploadModule } from './upload/upload.module';
 import { AiModule } from './ai/ai.module';
 import { User } from './users/user.entity';
 import { JobTitle } from './jobs/job-title.entity';
 import { JobsModule } from './jobs/jobs.module';
 import { UserCv } from './user-cv/user-cv.entity';
+import { UserCvModule } from './user-cv/user-cv.module';
 
 @Module({
   imports: [
@@ -29,7 +29,7 @@ import { UserCv } from './user-cv/user-cv.entity';
     }),
     AuthModule,
     UsersModule,
-    UploadModule,
+    UserCvModule,
     AiModule,
     JobsModule,
   ],
